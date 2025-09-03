@@ -17,26 +17,20 @@
             
         </div>
 
-        <div class="todo-container">
-            <button class="save" id="save-todos"></button>
-            <ul id="todos">
-            </ul>
-        </div>
-
         <footer><p>&copy; 2025 NilCircuit</p></footer>
     </body>
 
     <script> const _debug = false; </script> <!-- For debug logging in the console -->
-    <script src="./scripts/main.js"></script>
+    <script src="./scripts/examples.js"></script>
     <script>
-        // This runs after main.js is loaded and ran, so we can use functions defined in main.js
-        // _main_globals is an object earlier created in main.js. Window holds ALL global variables
+        // This runs after examples.js is loaded and ran, so we can use functions defined in examples.js
+        // _main_globals is an object earlier created in examples.js. Window holds ALL global variables
         // such as document, they just aren't visible to you. Window is accessible to any and all scripts. window.name is a preset variable, and
         // doesn't get refreshed by other sites, so it can introduce script injection vulnerabilities if you use it to store user input.
 
         localStorage.setItem("my-todods", null) // Accidentally incorrectly set a localStorage item, romoving it with this
 
-        _main_globals.functions.hello(); // This calls the hello function defined in main.js that prints "Hello, World!" to the console.
+        _main_globals.functions.hello(); // This calls the hello function defined in examples.js that prints "Hello, World!" to the console.
 
         _todo_globals.functions.loadTodos(); // Load todos from localStorage.
 
