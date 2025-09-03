@@ -1,0 +1,83 @@
+:root {
+    --outline-size: 3px;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    background-color: #181818;
+}
+
+p {
+    color: white;
+}
+
+.template {
+    outline-color: #fff;
+    outline-width: var(--outline-size);
+    outline-style: solid;
+    outline-offset: calc(var(--outline-size) * -1);
+    
+    background: transparent;
+
+    border-radius: 10px;
+}
+
+div.top-menu {
+    top: 0;
+    left: calc(50% + 6.5vw);
+
+    position: fixed;
+    transform: translateX(-50%);
+
+    height: min(15vh, 80px);
+    width:calc(100vw - 26vw);
+    
+    background: transparent;
+}
+
+div.toolbar {
+    position: fixed;
+    
+    height: calc(100vh - 50px);
+    width: 13vw;
+    
+    top: 0;
+    left: 0;
+    
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    
+    padding: 8px;
+    gap: 8px;
+    
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+}
+
+
+footer {
+    position: fixed;
+    padding: 4px;
+    
+    bottom: 0;
+    left: 0;
+    
+    height: 16px;
+    width: 100vw;
+
+    color: white;
+    background-color: #282828;
+    
+    display: flex;
+
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
