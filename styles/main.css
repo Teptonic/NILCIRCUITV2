@@ -78,6 +78,12 @@ div.toolbar-item {
     padding-left: 10px;
     padding-right: 10px;
 
+    background-color: #383838;
+
+    outline-width: 3px;
+    outline-color: rgb(88, 88, 88);
+    outline-offset: -3px;
+
     border-radius: 10px;
     gap: 4px;
     
@@ -90,12 +96,15 @@ div.toolbar-item {
 }
 
 div.toolbar-item:hover {
-    -webkit-box-shadow: 0px 0px 7px 4px rgba(255,255,255,0.6); 
-    box-shadow: 0px 0px 7px 4px rgba(255,255,255,0.6);
+    -webkit-box-shadow: 0px 0px 7px 4px rgba(88,88,88,0.6); 
+    box-shadow: 0px 0px 7px 4px rgba(88,88,88,0.6);
     cursor: pointer;
 }
 
 div.toolbar-item:active {
+    -webkit-box-shadow: 0px 0px 7px 4px rgba(185, 185, 185, 0.6); 
+    box-shadow: 0px 0px 7px 4px rgba(185, 185, 185, 0.6);
+    outline-color: rgb(185, 185, 185);
     transform: scale(0.95);
 }
 
