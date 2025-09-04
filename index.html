@@ -21,24 +21,26 @@
     </body>
 
     <script> const _debug = false; </script> <!-- For debug logging in the console -->
+    <script src="./scripts/tools.js"></script>
     <script src="./scripts/examples.js"></script>
     <script>
-        // This runs after examples.js is loaded and ran, so we can use functions defined in examples.js
-        // _main_globals is an object earlier created in examples.js. Window holds ALL global variables
+        // This runs after prior scripts are loaded and ran, so we can use functions defined in them.
+        // _main_globals is an object earlier created in examples.js. window holds ALL global variables
         // such as document, they just aren't visible to you. Window is accessible to any and all scripts. window.name is a preset variable, and
         // doesn't get refreshed by other sites, so it can introduce script injection vulnerabilities if you use it to store user input.
 
-        localStorage.setItem("my-todods", null) // Accidentally incorrectly set a localStorage item, romoving it with this
+        // Here we will quickly introduce our Logger class for... well, logging of course.
+        const mainLogger = new Logger("Main")
+
+        mainLogger.log(LOG_LEVEL.INFO, "This works just like console.log, including using other types like objects and arrays");
+
+        let exampleObject = {text: "Hello, world!", length: "Hello, world!".length};
+        mainLogger.log(LOG_LEVEL.DEBUG, exampleObject.text, exampleObject.length)
 
         _main_globals.functions.hello(); // This calls the hello function defined in examples.js that prints "Hello, World!" to the console.
 
-        _todo_globals.functions.loadTodos(); // Load todos from localStorage.
-
-         if (_debug) _todo_globals.variables.todos.push({status: 0, text: "Test"}); // Make a change for debugging.
-
-        _todo_globals.functions.saveTodos(); // Save the change.
-
-        if (_debug) console.debug(localStorage); // Log the localStorage for testing and debugging.
+        let myVector2 = Vector2.fromArray([1, 5]);
+        console.debug(myVector2);
     </script>
 
 </html>

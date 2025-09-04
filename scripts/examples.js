@@ -1,4 +1,4 @@
-let _main_globals = {      // Prevents polluting global namespace
+let _main_globals = {  // Prevents polluting global namespace
     variables: [],     // Table of exported variables, accessable globally
     functions: []      // Table of exported functions, accessable globally
 };
