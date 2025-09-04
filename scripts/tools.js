@@ -1,6 +1,5 @@
 class Vector2 {
-    x;
-    y;
+    x; y;
     constructor(x, y) {
         this.x = x;
         this.y = y;
@@ -74,86 +73,6 @@ class Vector2 {
     }
 };
 
-class Vector3 {
-    x;
-    y;
-    z;
-    constructor(x, y, z) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
-    }
-
-    
-
-    static fromArray(array) {
-        if (!(array instanceof Array)) {
-            throw new Error("Argument must be an Array");
-        }
-        if (array.length < 3 || array.length > 3) {
-            throw new Error(`Array size isn\'t correct
-                    Expected size: 3
-                    Gotten size:   ${array.length}`);
-        }
-        return new Vector3(array[0], array[1], array[2]);
-    }
-
-    static fromNum(n) {
-        if (!(n instanceof Number || n instanceof BigInt)) {
-            throw new Error("Argument must be a Number or BigInt");
-        }
-
-        return new Vector3(n, n, n);
-    }
-
-    sum() {
-        return this.x + this.y + this.z;
-    }
-
-    add(o) {
-        if (!(o instanceof Vector3)) {
-            throw new Error("Argument must be a Vector3");
-        }
-        return new Vector3(this.x + o.x, this.y + o.y, this.z + o.z);
-    }
-
-    sub(o) {
-        if (!(o instanceof Vector3)) {
-            throw new Error("Argument must be a Vector3");
-        }
-        return new Vector3(this.x - o.x, this.y - o.y, this.z - o.z);
-    }
-
-    div(o) {
-        if (!(o instanceof Vector3)) {
-            throw new Error("Argument must be a Vector3");
-        }
-        return new Vector3(this.x / o.x, this.y / o.y, this.z / o.z);
-    }
-
-    mul(o) {
-        if (!(o instanceof Vector3)) {
-            throw new Error("Argument must be a Vector3");
-        }
-        return new Vector3(this.x * o.x, this.y * o.y, this.z * o.z);
-    }
-
-    mod(o) {
-        if (!(o instanceof Vector3)) {
-            throw new Error("Argument must be a Vector3");
-        }
-        return new Vector3(this.x % o.x, this.y % o.y, this.z % o.z);
-    }
-
-    abs() {
-        return new Vector3(Math.abs(this.x), Math.abs(this.y), Math.abs(this.z));
-    }
-    
-    asArray() {
-        return [this.x, this.y, this.z];
-    }
-}
-
 const LOG_LEVEL = {
     DEBUG: 0,
     INFO:  1,
@@ -184,25 +103,35 @@ class Logger {
         const minutes = now.getMinutes();
         const seconds = now.getSeconds();
 
+        let time = `(${hours}:${minutes}:${seconds})`;
+        let log = "";
+
         switch (level) {
             case 0:
-                console.log(`(${hours}:${minutes}:${seconds}) [DEBUG] ${args}`)
+                log = `${time} [DEBUG] ${args}`;
+                console.warn(log);
                 break;
             case 1:
-                console.log(`(${hours}:${minutes}:${seconds}) [INFO] ${args}`)
+                log = `${time} [INFO] ${args}`;
+                console.warn(log);
                 break;
             case 2:
-                console.warn(`(${hours}:${minutes}:${seconds}) [WARN] ${args}`)
+                log = `${time} [WARN] ${args}`;
+                console.warn(log);
                 break;
             case 3:
-                console.error(`(${hours}:${minutes}:${seconds}) [ERROR] ${args}`)
+                log = `${time} [ERROR] ${args}`;
+                console.error(log);
                 break;
             case 4:
-                throw new Error(`(${hours}:${minutes}:${seconds}) [FATAL] ${args}`);
+                log = `${time} [FATAL] ${args}`;
+                throw new Error(log);
 
             default:
                 throw new Error("Invalid log level");
         }
+
+        return log; // For forwarding to other outputs
 
     }
 

@@ -1,4 +1,4 @@
-let _main_globals = {  // Prevents polluting global namespace
+let _main_globals = {  // Prevents polluting global namespace by creating one object
     variables: [],     // Table of exported variables, accessable globally
     functions: []      // Table of exported functions, accessable globally
 };
@@ -32,5 +32,4 @@ let _main_globals = {  // Prevents polluting global namespace
         console.log("Hello, World!");
     };
 
-    _main_globals = _main_globals; // Export the globals to window, making it global.
 })(); // Call the function with ()

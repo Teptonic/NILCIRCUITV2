@@ -4,29 +4,51 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>NilCircuit V2</title>
+        <link rel="icon" href="./assets/image/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="./styles/fonts.css">
         <link rel="stylesheet" href="./styles/main.css">
+        <link rel="stylesheet" href="./styles/toolbar.css">
+        <link rel="stylesheet" href="./styles/main-area.css">
+        <link rel="stylesheet" href="./styles/top-menu.css">
     </head>
 
     <body>
         <!-- <header> <h1>My Website</h1> </header> -->
         <div class="toolbar template">
-            <div class="toolbar-item">
-                <p>Test</p>
-            </div>
-            <div class="toolbar-item"></div>
-            <div class="toolbar-item"></div>
+            <button class="toolbar-item" id="ColorScheme1">
+                Color Scheme 1
+            </button>
+            <button class="toolbar-item" id="ColorScheme2">
+                Color Scheme 2
+            </button>
+            <button class="toolbar-item" id="SubpageButton">
+                Subpage
+            </button>
+            <button class="toolbar-item" id="ScamButton">
+                Scammers
+            </button>
         </div>
         <div class="top-menu template">
-            
+            <h1 class="main-text">NILCIRCUIT V2</h1>
+        </div>
+        <div class="main-area template" id="mainBody">
+            <p class="consoleLike main-area-item">> <span class="consoleLike" style="color: rgb(255, 98, 98);">Welcome to NilCircuitV2!</span></p>
+            <p class="consoleLike main-area-item">> Our site is still <span class="consoleLike" style="color: rgb(255, 174, 98);">UNDER DEVELOPMENT</span>!</p>
+            <p class="consoleLike main-area-item">> <span class="consoleLike" style="color: rgb(255, 255, 98);">In the meantime, listen to C418!</span></p>
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/3Gt7rOjcZQoHCfnKl5AkK7?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <p class="consoleLike main-area-item">> <span class="consoleLike" style="color: rgb(124, 255, 98);">Or maybe @Teptonic's playlist!</span></p>
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2IKJbrNo7axGkf68Dz8qxU?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
 
         <footer><p>&copy; 2025 NilCircuit</p></footer>
     </body>
 
-    <script> const _debug = false; </script> <!-- For debug logging in the console -->
+    <script src="./scripts/themes.js"></script>
     <script src="./scripts/tools.js"></script>
     <script src="./scripts/examples.js"></script>
+    <script src="./scripts/hooks.js"></script>
+    <script src="./scripts/learning.js"></script>
     <script>
         // This runs after prior scripts are loaded and ran, so we can use functions defined in them.
         // _main_globals is an object earlier created in examples.js. window holds ALL global variables
@@ -45,6 +67,16 @@
 
         let myVector2 = Vector2.fromArray([1, 5]);
         console.debug(myVector2);
+
+        const subpageButton = document.getElementById("SubpageButton");
+        subpageButton.addEventListener("click", (ev)=>{
+            window.location.href = "./subpages/subpage.html";
+        });
+
+        const scamButton = document.getElementById("ScamButton");
+        scamButton.addEventListener("click", (ev)=>{
+            window.location.href = "./subpages/scammers.html";
+        });
     </script>
 
 </html>

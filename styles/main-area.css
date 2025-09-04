@@ -1,0 +1,22 @@
+div.main-area {
+    position: fixed;
+
+    top: calc(clamp(100px, 10vh, 130px) + 10px); /*the top of the main area always stays 10px under the bottom of the top menu*/
+    bottom: 30px;
+    right: 5px;
+    left: calc(13vw + 5px);
+    
+    background: transparent;
+}
+
+
+.main-area-item {
+    position: relative;
+    left: 10px;
+}
+
+.consoleLike {
+    font-family: "Roboto";
+    font-size: 16px;
+    color: white;
+}

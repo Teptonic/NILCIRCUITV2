@@ -1,0 +1,10 @@
+RULES OF CSS LAYOUT:
+    Positioning (position, top, left, right, z-index…)
+
+    Box model (margin, border, padding, width, height…)
+
+    Layout (display, flex/grid stuff…)
+
+    Text (font, line-height, text-align…)
+
+    Visual (background, shadows, colors, transitions…)
