@@ -15,6 +15,11 @@ p {
     color: white;
 }
 
+@font-face {
+    font-family: "Roboto";
+    src: url(/assets/font/Roboto_Mono/RobotoMono-VariableFont_wght.ttf);
+}
+
 .template {
     outline-color: #fff;
     outline-width: var(--outline-size);
@@ -60,6 +65,39 @@ div.toolbar {
     align-items: center;
 }
 
+div.toolbar-item {
+    position: relative;
+    width: 85%;
+    height: 5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    
+    padding-left: 10px;
+    padding-right: 10px;
+
+    border-radius: 10px;
+    gap: 4px;
+    
+    text-align: center;
+    font-family: "Roboto";
+
+    user-select: none;
+    
+    transition: all 0.2s;
+}
+
+div.toolbar-item:hover {
+    -webkit-box-shadow: 0px 0px 7px 4px rgba(255,255,255,0.6); 
+    box-shadow: 0px 0px 7px 4px rgba(255,255,255,0.6);
+    cursor: pointer;
+}
+
+div.toolbar-item:active {
+    transform: scale(0.95);
+}
 
 footer {
     position: fixed;
