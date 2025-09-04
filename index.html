@@ -34,8 +34,8 @@
 
         mainLogger.log(LOG_LEVEL.INFO, "This works just like console.log, including using other types like objects and arrays");
 
-        let exampleObject = {text: "Hello, world!", length: "Hello, world!".length};
-        mainLogger.log(LOG_LEVEL.DEBUG, exampleObject.text, exampleObject.length)
+        let exampleObject = {text: "This is an object with a .text key!"};
+        mainLogger.log(LOG_LEVEL.DEBUG, exampleObject.text);
 
         _main_globals.functions.hello(); // This calls the hello function defined in examples.js that prints "Hello, World!" to the console.
 
