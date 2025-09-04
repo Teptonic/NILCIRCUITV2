@@ -83,6 +83,7 @@ div.toolbar-item {
     outline-width: 3px;
     outline-color: rgb(88, 88, 88);
     outline-offset: -3px;
+    outline-style: solid;
 
     border-radius: 10px;
     gap: 4px;
