@@ -2,7 +2,9 @@ body.light-mode {
     --top-menu-text-color: black;
     --text-shadow-color-1: rgb(70, 70, 70);
     --text-shadow-color-2: rgb(0, 0, 0);
+    --main-text-gradient: linear-gradient(90deg, #000000, #292929, #000000);
 
+    --background-gradient: linear-gradient(90deg, #ffffff, #a7a7a7, #ffffff);
     --background-color: white;
     --border-color: black;
     --text-color: black;
@@ -18,7 +20,9 @@ body.dark-mode {
     --top-menu-text-color: white;
     --text-shadow-color-1: rgb(185, 185, 185);
     --text-shadow-color-2: rgb(255, 255, 255);
+    --main-text-gradient: linear-gradient(90deg, #ffffff, #b8b8b8, #ffffff);
 
+    --background-gradient: linear-gradient(90deg, #000000, #252525, #000000);
     --background-color: black;
     --border-color: white;
     --text-color: white;

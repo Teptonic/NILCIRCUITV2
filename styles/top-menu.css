@@ -1,8 +1,13 @@
 
 #main-text {
-    color: var(--top-menu-text-color);
+    color: /*transparent*/ var(--top-menu-text-color); /* toggle by setting to transparent */
     font-size: 40px;
     font-family: OpenSans;
+
+    /* Gradient implementation. Depends on text color being transparent */
+    background: var(--main-text-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
 
     user-select: none;
 

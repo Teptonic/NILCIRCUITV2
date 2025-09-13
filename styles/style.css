@@ -15,11 +15,13 @@ div.main-container {
 
 div.main-container {
     background-color: var(--background-color);
+    /* background: var(--background-gradient); */
+    
 }
 
- .top-menu, 
- .toolbar, 
- .main-area {
+.top-menu, 
+.toolbar, 
+.main-area {
     border: 3px solid var(--border-color);
     box-sizing: border-box;
     color: var(--text-color);
