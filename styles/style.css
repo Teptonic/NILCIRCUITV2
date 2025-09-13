@@ -1,33 +1,30 @@
-@font-face {
-    font-family: "Roboto";
-    src: url(/assets/font/Roboto_Mono/RobotoMono-VariableFont_wght.ttf);
+body {
+    background-color: black;
+    font-family: OpenSans;
 }
 
-@font-face {
-    font-family: "UbuntuMono";
-    src: url(/assets/font/Ubuntu_Mono/UbuntuMono-Regular.ttf);
-}
-
-@font-face {
-    font-family: "IBMPlexMono";
-    src: url(/assets/font/IBM_Plex_Mono/IBMPlexMono-Regular.ttf);
-}
-
-div.MAIN_CONTAINER {
+div.main-container {
     display: grid;
     grid-template-columns: clamp(200px, 15vw, 400px) 1fr;
     grid-template-rows: clamp(100px, 10vh, 200px) 1fr;
     height: 100vh;
     gap: 5px;
-
-    background-color: rgb(0, 0, 0);
 }
 
-.top-menu, .toolbar, .main-area {
-    border: 3px solid rgb(255, 255, 255);
+/* SCHEME COLORING */
+
+div.main-container {
+    background-color: var(--background-color);
+}
+
+ .top-menu, 
+ .toolbar, 
+ .main-area {
+    border: 3px solid var(--border-color);
     box-sizing: border-box;
-    color: white;
+    color: var(--text-color);
 }
+
 
 .top-menu {
     grid-column: 1 / span 2;            /* spans both columns */
@@ -38,24 +35,30 @@ div.MAIN_CONTAINER {
     justify-content: center;
 }
 
-.toolbar {
-    grid-column: 1;                     /* first column */
-    grid-row: 2;                        /* second row */
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .main-area {
     grid-column: 2;                     /* second column */
     grid-row: 2;                        /* second row */
-
+    
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 30px;
 }
 
+.toolbar {
+    grid-column: 1;                     /* first column */
+    grid-row: 2;                        /* second row */
 
+    position: relative;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 
+    overflow: hidden;
+
+    gap: 20px;
+    padding-top: 10px;
+}

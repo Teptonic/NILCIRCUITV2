@@ -1,0 +1,31 @@
+body.light-mode {
+    --top-menu-text-color: black;
+    --text-shadow-color-1: rgb(70, 70, 70);
+    --text-shadow-color-2: rgb(0, 0, 0);
+
+    --background-color: white;
+    --border-color: black;
+    --text-color: black;
+
+    --box-shadow-color-button: black;
+    --border-color-button: black;
+    --button-background: rgb(235, 235, 235);
+    --button-active-background-color: white;
+    --button-text-color: black;
+}
+
+body.dark-mode {
+    --top-menu-text-color: white;
+    --text-shadow-color-1: rgb(185, 185, 185);
+    --text-shadow-color-2: rgb(255, 255, 255);
+
+    --background-color: black;
+    --border-color: white;
+    --text-color: white;
+    
+    --box-shadow-color-button: white;
+    --border-color-button: rgb(255, 255, 255);
+    --button-background: rgb(30, 30, 30);
+    --button-active-background-color: black;
+    --button-text-color: white;
+}

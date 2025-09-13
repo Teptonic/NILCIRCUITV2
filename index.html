@@ -4,29 +4,42 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>NilCircuit V2</title>
+        <title>NILCIRCUIT V2</title>
         <link rel="icon" href="./assets/image/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="./styles/fonts.css">
+        <link rel="stylesheet" href="./styles/theme.css">
         <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/toolbar.css">
+        <link rel="stylesheet" href="./styles/top-menu.css">
 
     </head>
 
-    <body>
-            <div class="MAIN_CONTAINER">
-                <div class="top-menu">Top Menu</div>
+    <body class="dark-mode">
+            <div class="main-container">
+                <div class="top-menu">
+                    <span id="main-text">NILCIRCUIT V2</span>
+                </div>
                 <div class="main-area">Main Area</div>
-                <div class="toolbar">Toolbar</div>
+                <div class="toolbar">
+                    <div class="menu main-menu">
+                        <button class="menu-button" id="colorSchemeButton">
+                            COLOR SCHEME
+                        </button>
+                    </div>
+
+                    <div class="menu submenu">
+                        <button class="back-button">Back</button>
+                        <button class="submenu-button" id="colorSchemeDarkMode">Dark Mode</button>
+                        <button class="submenu-button" id="colorSchemeLightMode">Light Mode</button>
+                        <button class="submenu-button" id="colorSchemeStrobeMode">Toggle Strobe Mode</button>
+                    </div>
+
+                </div>
             </div>
+
+            <script src="./scripts/titleHandler.js"></script>
+            <script src="./scripts/learning.js"></script>
+
     </body>
-
-    <script src="./scripts/examples.js"></script>
-    <script src="./scripts/learning.js"></script>
-    <script>
-        // This runs after prior scripts are loaded and ran, so we can use functions defined in them.
-        // _main_globals is an object earlier created in examples.js. window holds ALL global variables
-        // such as document, they just aren't visible to you. Window is accessible to any and all scripts. window.name is a preset variable, and
-        // doesn't get refreshed by other sites, so it can introduce script injection vulnerabilities if you use it to store user input.
-
-        _main_globals.functions.hello(); // This calls the hello function defined in examples.js that prints "Hello, World!" to the console.
-    </script>
 
 </html>

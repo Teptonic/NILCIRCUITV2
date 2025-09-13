@@ -1,26 +1,57 @@
-document.getElementById("ColorScheme1").addEventListener("click", ColorScheme1);
-document.getElementById("ColorScheme2").addEventListener("click", ColorScheme2);
 
-function changeGlowColors(main, startEnd, Middle) {
-    const root = document.documentElement;
-    root.style.setProperty('--main-glow', main);
-    root.style.setProperty('--pulse-glow-start-end', startEnd);
-    root.style.setProperty('--pulse-glow-middle', Middle);
-}
 
-function ColorScheme1() {
-    changeGlowColors(
-        'rgb(26, 188, 23)',
-        'rgb(27, 130, 25)',
-        'rgb(22, 168, 63)'
-    )
-}
+const colorSchemeButton = document.getElementById('colorSchemeButton');
+const backButton = document.getElementsByClassName('back-button');
 
-function ColorScheme2() {
-        changeGlowColors(
-        'rgb(0, 247, 255)',
-        'rgb(0, 166, 172)',
-        'rgb(0, 60, 255)'
-    )
-}
+const darkModeButton = document.getElementById('colorSchemeDarkMode');
+const lightModeButton = document.getElementById('colorSchemeLightMode');
+const strobeModeButton = document.getElementById('colorSchemeStrobeMode');
 
+
+const submenu = document.getElementsByClassName('submenu')[0];
+const toolbarMainMenu = document.getElementsByClassName('main-menu')[0];
+
+colorSchemeButton.addEventListener('click', () => {
+    toolbarMainMenu.style.transform = "translateX(-250px)";
+    submenu.style.transform = "translateX(0%)";
+});
+
+for (let i = 0; i < backButton.length; i++) {
+    backButton[i].addEventListener("click", () => {
+        toolbarMainMenu.style.transform = "translateX(0%)";
+        submenu.style.transform = "translateX(350px)";
+    });
+};
+
+lightModeButton.addEventListener('click', () => {
+    document.body.classList = "light-mode";
+    document.body.style.backgroundColor = "white";
+});
+
+darkModeButton.addEventListener('click', () => {
+    document.body.classList = "dark-mode";
+    document.body.style.backgroundColor = "black";
+});
+
+let strobeToggled = false;
+let STROBE_EVENT;
+let currTheme = document.body.classList;
+strobeModeButton.addEventListener('click', () => {
+    if (!strobeToggled) {
+        strobeToggled = true;
+        STROBE_EVENT = setInterval(() => {
+            if (currTheme == "dark-mode") {
+                currTheme = "light-mode";
+                document.body.classList = "light-mode";
+                document.body.style.backgroundColor = "white";
+            } else {
+                currTheme = "dark-mode";
+                document.body.classList = "dark-mode";
+                document.body.style.backgroundColor = "black";
+            }
+        }, 100)
+    } else {
+        strobeToggled = false;
+        clearInterval(STROBE_EVENT);
+    }
+})

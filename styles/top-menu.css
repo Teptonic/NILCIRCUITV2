@@ -1,0 +1,29 @@
+
+#main-text {
+    color: var(--top-menu-text-color);
+    font-size: 40px;
+    font-family: OpenSans;
+
+    user-select: none;
+
+    background-color: transparent;
+
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        text-shadow: 
+            0 0 10px var(--text-shadow-color-1),
+            0 0 20px var(--text-shadow-color-1),
+            0 0 40px var(--text-shadow-color-1);
+        transform: scale(1);
+    }
+    50% {
+        text-shadow: 
+            0 0 10px var(--text-shadow-color-2),
+            0 0 20px var(--text-shadow-color-2),
+            0 0 40px var(--text-shadow-color-2);
+        transform: scale(1.01);
+    }
+}
