@@ -9,6 +9,7 @@ button {
     border-radius: 15px;
     background-color: var(--button-background);
     font-size: small;
+    font-family: OpenSans;
     padding-top: 4px;
     padding-bottom: 4px;
     padding-left: 20px;

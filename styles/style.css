@@ -14,9 +14,11 @@ div.main-container {
 /* SCHEME COLORING */
 
 div.main-container {
+
     background-color: var(--background-color);
     /* background: var(--background-gradient); */
     
+    transition: all 0.3s ease;
 }
 
 .top-menu, 
@@ -39,12 +41,11 @@ div.main-container {
 
 
 .main-area {
+    position: relative;
+
     grid-column: 2;                     /* second column */
     grid-row: 2;                        /* second row */
     
-    display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 30px;
 }
 

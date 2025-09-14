@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="./styles/style.css">
         <link rel="stylesheet" href="./styles/toolbar.css">
         <link rel="stylesheet" href="./styles/top-menu.css">
+        <link rel="stylesheet" href="./styles/info.css">
 
     </head>
 
@@ -20,7 +21,14 @@
                 <div class="top-menu">
                     <span id="main-text">NILCIRCUIT V2</span>
                 </div>
-                <div class="main-area">Main Area</div>
+                <div class="main-area">
+                    <div class="info">
+                        <p class="info-icon">i</p>
+                        <h1 id="ip">IP: </h1>
+                        <h1 id="date">Date: </h1>
+                        <h1 id="country">Country: </h1>
+                    </div>
+                </div>
                 <div class="toolbar">
                     <div class="menu main-menu">
                         <button class="menu-button" id="colorSchemeButton">
@@ -39,6 +47,7 @@
             </div>
 
             <script src="./scripts/titleHandler.js"></script>
+            <script src="./scripts/colorScheme.js"></script>
             <script src="./scripts/learning.js"></script>
 
     </body>

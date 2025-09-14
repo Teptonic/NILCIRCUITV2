@@ -1,0 +1,51 @@
+
+div.info {
+    position: absolute;
+
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--border-color);
+    border-radius: 6px;
+    padding: 10px;
+
+    top: 5px;
+    right: 5px;
+
+}
+
+div.info h1 {
+    user-select: none;
+    font-size: 20px;
+
+    color: var(--text-color);
+
+    text-shadow: 0 0 10px var(--text-shadow-color-2);
+}
+
+.info-icon {
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+
+    left: 0px;
+    bottom: 0px;
+
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--border-color);
+    border-radius: 50%;
+    
+    background-color: var(--background-color);
+
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 14px;
+    
+    text-align: center;
+    
+    user-select: none;
+    transform: translate(-50%, 100%);
+
+    transition: all 0.3s ease;
+}
